@@ -16,8 +16,11 @@ import java.io.IOException;
 @Service
 public class PopulaBancoService {
 
-    @Autowired
-    private FilmeRepository repository;
+    private final FilmeRepository repository;
+
+    private PopulaBancoService(FilmeRepository filmeRepository){
+        this.repository = filmeRepository;
+    }
 
     private static final Logger log = LoggerFactory.getLogger(PopulaBancoService.class);
 

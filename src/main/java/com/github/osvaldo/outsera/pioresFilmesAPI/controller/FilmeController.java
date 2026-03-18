@@ -14,13 +14,12 @@ import java.util.Map;
 @RequestMapping("filme")
 public class FilmeController {
 
-    private FilmeRepository filmeRepository;
+    private final FilmeRepository filmeRepository;
+    private final FilmeService filmeService;
 
-    @Autowired
-    private FilmeService filmeService;
-
-    public FilmeController(FilmeRepository filmeRepository) {
+    public FilmeController(FilmeRepository filmeRepository, FilmeService filmeService) {
         this.filmeRepository = filmeRepository;
+        this.filmeService = filmeService;
     }
 
     @GetMapping("/produtor/intervalo")

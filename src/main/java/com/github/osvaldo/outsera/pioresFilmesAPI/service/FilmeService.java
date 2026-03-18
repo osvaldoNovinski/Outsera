@@ -12,8 +12,11 @@ import java.util.*;
 @Service
 public class FilmeService {
 
-    @Autowired
-    private FilmeRepository filmeRepository;
+    private final FilmeRepository filmeRepository;
+
+    private FilmeService(FilmeRepository filmeRepository){
+        this.filmeRepository = filmeRepository;
+    }
 
     public Map<String, List<Long>> trataProdutorPorAno(){
 
