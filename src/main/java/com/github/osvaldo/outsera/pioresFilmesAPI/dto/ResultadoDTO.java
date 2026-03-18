@@ -4,23 +4,23 @@ import java.util.List;
 
 public class ResultadoDTO {
 
-    private List<IntervaloDTO> menorIntervalo;
-    private List<IntervaloDTO> maiorIntervalo;
+    private List<IntervaloDTO> min;
+    private List<IntervaloDTO> max;
 
-    public List<IntervaloDTO> getMenorIntervalo() {
-        return menorIntervalo;
+    public List<IntervaloDTO> getMin() {
+        return min;
     }
 
-    public void setMenorIntervalo(List<IntervaloDTO> menorIntervalo) {
-        this.menorIntervalo = menorIntervalo;
+    public void setMin(List<IntervaloDTO> min) {
+        this.min = min;
     }
 
-    public List<IntervaloDTO> getMaiorIntervalo() {
-        return maiorIntervalo;
+    public List<IntervaloDTO> getMax() {
+        return max;
     }
 
-    public void setMaiorIntervalo(List<IntervaloDTO> maiorIntervalo) {
-        this.maiorIntervalo = maiorIntervalo;
+    public void setMax(List<IntervaloDTO> max) {
+        this.max = max;
     }
 
 

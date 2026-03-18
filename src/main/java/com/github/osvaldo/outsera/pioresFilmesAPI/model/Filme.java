@@ -1,17 +1,19 @@
 package com.github.osvaldo.outsera.pioresFilmesAPI.model;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
+import org.hibernate.annotations.GenericGenerator;
+
+import java.util.UUID;
 
 @Entity
 @Table(name = "filmes")
 public class Filme {
 
     @Id
-    @Column(name = "id")
-    private Long id;
+    @GeneratedValue(generator = "UUID")
+    @GenericGenerator(name = "UUID", strategy = "org.hibernate.id.UUIDGenerator")
+    private UUID id;
+
     @Column(name = "ano")
     private Long ano;
     @Column(name = "titulo")
@@ -26,21 +28,12 @@ public class Filme {
     public Filme() {
     }
 
-    public Filme(Long id, Long ano, String titulo, String estudio, String produtor, String vencedor) {
-        this.id = id;
+    public Filme(Long ano, String titulo, String estudio, String produtor, String vencedor) {
         this.ano = ano;
         this.titulo = titulo;
         this.estudio = estudio;
         this.produtor = produtor;
         this.vencedor = vencedor;
-    }
-
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
     }
 
     public Long getAno() {
@@ -86,7 +79,6 @@ public class Filme {
     @Override
     public String toString() {
         return "Filme{" +
-                "id=" + id +
                 ", ano=" + ano +
                 ", titulo='" + titulo + '\'' +
                 ", estudio='" + estudio + '\'' +

@@ -28,7 +28,6 @@ public class FilmeService {
 
             for (String p : produtores) {
                 if (!p.isEmpty()) {
-                    p = p.replace(" ", "");
                     if (!produtorPorAno.containsKey(p)) {
                         produtorPorAno.put(p, new ArrayList<>());
                     }
@@ -63,18 +62,18 @@ public class FilmeService {
 
                 if (intervalo > maiorIntervalo) {
                     maiorIntervalo = intervalo;
-                    resultadoDTO.setMaiorIntervalo(new ArrayList<>());
-                    resultadoDTO.getMaiorIntervalo().add(dto);
+                    resultadoDTO.setMax(new ArrayList<>());
+                    resultadoDTO.getMax().add(dto);
                 } else if (intervalo.equals(maiorIntervalo)) {
-                    resultadoDTO.getMaiorIntervalo().add(dto);
+                    resultadoDTO.getMax().add(dto);
                 }
 
                 if (intervalo < menorIntervalo) {
                     menorIntervalo = intervalo;
-                    resultadoDTO.setMenorIntervalo(new ArrayList<>());
-                    resultadoDTO.getMenorIntervalo().add(dto);
+                    resultadoDTO.setMin(new ArrayList<>());
+                    resultadoDTO.getMin().add(dto);
                 } else if (intervalo.equals(menorIntervalo)) {
-                    resultadoDTO.getMenorIntervalo().add(dto);
+                    resultadoDTO.getMin().add(dto);
                 }
             }
 

@@ -3,50 +3,50 @@ package com.github.osvaldo.outsera.pioresFilmesAPI.dto;
 
 public class IntervaloDTO {
 
-    private String produtor;
-    private Long intervalo;
-    private Long ultimoGanho;
-    private Long proximoGanho;
+    private String producer;
+    private Long interval;
+    private Long previousWin;
+    private Long followingWin;
 
     public IntervaloDTO() {
     }
 
     public IntervaloDTO(String produtor, Long intervalo, Long ultimoGanho, Long proximoGanho) {
-        this.produtor = produtor;
-        this.intervalo = intervalo;
-        this.ultimoGanho = ultimoGanho;
-        this.proximoGanho = proximoGanho;
+        this.producer = produtor;
+        this.interval = intervalo;
+        this.previousWin = ultimoGanho;
+        this.followingWin = proximoGanho;
     }
 
-    public String getProdutor() {
-        return produtor;
+    public String getProducer() {
+        return producer;
     }
 
-    public void setProdutor(String produtor) {
-        this.produtor = produtor;
+    public void setProducer(String producer) {
+        this.producer = producer;
     }
 
-    public Long getIntervalo() {
-        return intervalo;
+    public Long getInterval() {
+        return interval;
     }
 
-    public void setIntervalo(Long intervalo) {
-        this.intervalo = intervalo;
+    public void setInterval(Long interval) {
+        this.interval = interval;
     }
 
-    public Long getUltimoGanho() {
-        return ultimoGanho;
+    public Long getPreviousWin() {
+        return previousWin;
     }
 
-    public void setUltimoGanho(Long ultimoGanho) {
-        this.ultimoGanho = ultimoGanho;
+    public void setPreviousWin(Long previousWin) {
+        this.previousWin = previousWin;
     }
 
-    public Long getProximoGanho() {
-        return proximoGanho;
+    public Long getFollowingWin() {
+        return followingWin;
     }
 
-    public void setProximoGanho(Long proximoGanho) {
-        this.proximoGanho = proximoGanho;
+    public void setFollowingWin(Long followingWin) {
+        this.followingWin = followingWin;
     }
 }
